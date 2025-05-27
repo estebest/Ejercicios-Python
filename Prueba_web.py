@@ -1,10 +1,8 @@
-#Librerias
+# Librerías
 import dash
 from dash import html, dcc
 import plotly.express as px
 import pandas as pd
-
-
 
 # Crear datos de ejemplo
 df = pd.DataFrame({
@@ -17,6 +15,7 @@ fig = px.bar(df, x="Fruit", y="Amount", color="City", barmode="group")
 
 # Crear app
 app = dash.Dash(__name__)
+server = app.server  # <-- Esta línea debe estar aquí, fuera del main
 
 app.layout = html.Div(children=[
     html.H1(children='Mi Dashboard'),
@@ -30,6 +29,4 @@ app.layout = html.Div(children=[
 ])
 
 if __name__ == '__main__':
-    app.run(debug=True)
-
-    server = app.server
+    app.run_server(debug=True)
