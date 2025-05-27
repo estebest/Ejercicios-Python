@@ -4,6 +4,8 @@ from dash import html, dcc
 import plotly.express as px
 import pandas as pd
 
+
+
 # Crear datos de ejemplo
 df = pd.DataFrame({
     "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
@@ -29,3 +31,5 @@ app.layout = html.Div(children=[
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+    server = app.server
