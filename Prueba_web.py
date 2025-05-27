@@ -18,9 +18,9 @@ app = dash.Dash(__name__)
 server = app.server  # <-- Esta línea debe estar aquí, fuera del main
 
 app.layout = html.Div(children=[
-    html.H1(children='Mi Dashboard'),
+    html.H1(children='Primer dashboard prros'),
 
-    html.Div(children='Gráfico interactivo con Plotly.'),
+    html.Div(children='Gráfico interactivo de prueba (a ver qué tal)'),
 
     dcc.Graph(
         id='example-graph',
